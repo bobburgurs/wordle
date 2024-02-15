@@ -1,15 +1,32 @@
-h1 {
+body{
+  background-color: #FFF8FA;
+}
+
+h1{
  text-align: center;
+ color: #FFB5CB;
+ margin-bottom:0;
+ margin-top:45px;
+ font-size:50px;
+}
+
+p{
+  text-align: center;
+  color: #FFB5CB;
+  font-size:14px;
+  margin-top: 0;
+  margin-bottom:35px;
 }
 
 #game-board {
   display: flex;
   align-items: center;
   flex-direction: column;
+  
 }
 
 .letter-box {
-  border: 2px solid gray;
+  border: 2px solid #FFB5CB;
   border-radius: 3px;
   margin: 2px;
   font-size: 2.5rem;
@@ -23,11 +40,13 @@ h1 {
 }
 
 .filled-box {
-  border: 2px solid black;
+  color: #ff84ad;
+  border: 2px solid #ffd2e1;
 }
 
 .letter-row {
   display: flex;
+  color: pink;
 }
 
 #keyboard-cont {
@@ -35,14 +54,17 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: pink;
 }
 
 #keyboard-cont div {
   display: flex;
+  color: pink
 }
 
 .second-row {
   margin: 0.5rem 0;
+  color: pink;
 }
 
 .keyboard-button {
@@ -52,4 +74,6 @@ h1 {
   margin: 0 2px;
   cursor: pointer;
   text-transform: uppercase;
+  color: #ff84ad;
+border-color: pink;
 }

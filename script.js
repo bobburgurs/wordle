@@ -29,11 +29,11 @@ function shadeKeyBoard(letter, color) {
   for (const elem of document.getElementsByClassName("keyboard-button")) {
     if (elem.textContent === letter) {
       let oldColor = elem.style.backgroundColor;
-      if (oldColor === "green") {
+      if (oldColor === "#C1E1C1") {
         return;
       }
 
-      if (oldColor === "yellow" && color !== "green") {
+      if (oldColor === "#fdfd96" && color !== "#C1E1C1") {
         return;
       }
 
@@ -71,12 +71,12 @@ function checkGuess() {
     return;
   }
 
-  var letterColor = ["gray", "gray", "gray", "gray", "gray"];
+  var letterColor = ["#cfcfc4", "#cfcfc4", "#cfcfc4", "#cfcfc4", "#cfcfc4"];
 
   //check green
   for (let i = 0; i < 5; i++) {
     if (rightGuess[i] == currentGuess[i]) {
-      letterColor[i] = "green";
+      letterColor[i] = "#C1E1C1";
       rightGuess[i] = "#";
     }
   }
@@ -84,12 +84,12 @@ function checkGuess() {
   //check yellow
   //checking guess letters
   for (let i = 0; i < 5; i++) {
-    if (letterColor[i] == "green") continue;
+    if (letterColor[i] == "#C1E1C1") continue;
 
     //checking right letters
     for (let j = 0; j < 5; j++) {
       if (rightGuess[j] == currentGuess[i]) {
-        letterColor[i] = "yellow";
+        letterColor[i] = "#fdfd96";
         rightGuess[j] = "#";
       }
     }
@@ -198,3 +198,4 @@ document.getElementById("keyboard-cont").addEventListener("click", (e) => {
 });
 
 initBoard();
+
